@@ -4,6 +4,7 @@ class Node:
         self.right = None
         self.val = key
 
+class BinarySearchTree:
     def insert(self, root, key):
         if root is None:
             return Node(key)
@@ -15,5 +16,4 @@ class Node:
             else:
                 root.left = self.insert(root.left, key)
         return root
-
-class BinarySearchTree:
+    

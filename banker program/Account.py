@@ -8,3 +8,8 @@ class Account:
 
     def withdraw(self, account, amount):
 
+    def transfer(self, origin, amount, target):
+
+    def history(self, account):
+
+    
