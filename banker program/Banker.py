@@ -1,5 +1,5 @@
 from Account import Account
-from BinarySearch import BinarySearchTree
+from BinarySearch import Node
 
 class banker:
     def __init__(self, transaction_list):
@@ -17,6 +17,7 @@ class banker:
     # Open
     def open(self, name, acct_num):
         new_acct = Account(name, acct_num)
+        self.BTree = Node(acct_num, new_acct)
 
     def transaction(self, order, acct_num, amount):
         if order == 'W':

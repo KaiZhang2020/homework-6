@@ -1,19 +1,22 @@
 class Node:
-    def __init__(self, key):
+    def __init__(self, data, account_info):
         self.left = None
         self.right = None
-        self.val = key
-
-class BinarySearchTree:
-    def insert(self, root, key):
-        if root is None:
-            return Node(key)
-        else:
-            if root.val == key:
-                return root
-            elif root.val < key:
-                root.right = self.insert(root.right, key)
+        self.data = data
+        self.account = account_info
+    def insert(self, data, account_info):
+      if self.data:
+         if data < self.data:
+            if self.left is None:
+               self.left = Node(data, account_info)
             else:
-                root.left = self.insert(root.left, key)
-        return root
-    
+               self.left.insert(data, account_info)
+         elif data > self.data:
+            if self.right is None:
+               self.right = Node(data, account_info)
+            else:
+
+               self.right.insert(data, account_info)
+      else:
+         self.data = data
+         self.account_info = account_info
