@@ -28,45 +28,46 @@ class Account:
 
         self.transHist.append("O " + "name " + number)
     def total_val(self):
-        return (self.zero + self.one + self.two + self.three + 
-        self.four + self.five + self.six + self.seven + self.eight +
-        self.nine)
+        return (int(self.zero) + int(self.one) + int(self.two) + int(self.three) + 
+        int(self.four) + int(self.five) + int(self.six) + int(self.seven) + int(self.eight) +
+        int(self.nine))
     def deposit(self, fund, amount):
-        self.transHist.append("D " + self.number + fund + " " + amount)
+        amt_to_add = amount
+        self.transHist.append("D " + self.number + fund + " " + str(amt_to_add))
         if fund == "1":
             self.one += amount
-            self.oneHist.append("D " + fund + amount)
+            self.oneHist.append("D " + fund + str(amount))
         elif fund == "2":
             self.two += amount
-            self.twoHist.append("D " + fund + amount)
+            self.twoHist.append("D " + fund + str(amount))
         elif fund == "3":
             self.three += amount
-            self.threeHist.append("D " + fund + amount)
+            self.threeHist.append("D " + fund + str(amount))
         elif fund == "4":
-            self.fourHist.append("D " + fund + amount)
             self.four += amount
+            self.fourHist.append("D " + fund + str(amount))
         elif fund == "5":
-            self.fiveHist.append("D " + fund + amount)
             self.five += amount
+            self.fiveHist.append("D " + fund + str(amount))
         elif fund == "6":
-            self.sixHist.append("D " + fund + amount)
             self.six += amount
+            self.sixHist.append("D " + fund + str(amount))
         elif fund == "7":
-            self.sevenHist.append("D " + fund + amount)
             self.seven += amount
+            self.sevenHist.append("D " + fund + str(amount))
         elif fund == "8":
-            self.eightHist.append("D " + fund + amount)
             self.eight += amount
+            self.eightHist.append("D " + fund + str(amount))
         elif fund == "9":
-            self.nineHist.append("D " + fund + amount)
             self.nine += amount
+            self.nineHist.append("D " + fund + str(amount))
         elif fund == "0":
-            self.zeroHist.append("D " + fund + amount)
             self.zero += amount
+            self.zeroHist.append("D " + fund + str(amount))
         else:
             print("error")
     def withdraw(self, fund, amount):
-        if amount > self.total_val():
+        if int(amount) > self.total_val():
             print("insufficient funds")
         else:
             if fund == "1":
@@ -76,7 +77,7 @@ class Account:
                     self.one = 0
                     self.withdraw("2", amount)
                 else:
-                    self.oneHist.append("W " + fund + amount)
+                    self.oneHist.append("W " + fund + str(amount))
                     self.one -= amount 
             elif fund == "2":
                 if amount > self.two:
@@ -85,7 +86,7 @@ class Account:
                     self.two = 0
                     self.withdraw("3", amount)
                 else:
-                    self.twoHist.append("W" + fund + amount)
+                    self.twoHist.append("W" + fund + str(amount))
                     self.two -= amount
             elif fund == "3":
                 if amount > self.three:
@@ -94,7 +95,7 @@ class Account:
                     self.three = 0
                     self.withdraw("4", amount)
                 else:
-                    self.threeHist.append("W" + fund + amount)
+                    self.threeHist.append("W" + fund + str(amount))
                     self.three -= amount
             elif fund == "4":
                 if amount > self.four:
@@ -103,7 +104,7 @@ class Account:
                     self.four = 0
                     self.withdraw("5", amount)
                 else:
-                    self.fourHist.append("W" + fund + amount)
+                    self.fourHist.append("W" + fund + str(amount))
                     self.four -= amount
             elif fund == "5":
                 if amount > self.five:
@@ -112,7 +113,7 @@ class Account:
                     self.five = 0
                     self.withdraw("6", amount)
                 else:
-                    self.fiveHist.append("W" + fund + amount)
+                    self.fiveHist.append("W" + fund + str(amount))
                     self.five -= amount
             elif fund == "6":
                 if amount > self.six:
@@ -121,7 +122,7 @@ class Account:
                     self.six = 0
                     self.withdraw("7", amount)
                 else:
-                    self.sixHist.append("W" + fund + amount)
+                    self.sixHist.append("W" + fund + str(amount))
                     self.six -= amount
             elif fund == "7":
                 if amount > self.seven:
@@ -129,6 +130,7 @@ class Account:
                     self.seven = 0
                     self.withdraw("8", amount)
                 else:
+                    self.sevenHist.append("W" + fund + str(amount))
                     self.seven -= amount
             elif fund == "8":
                 if amount > self.eight:
@@ -137,7 +139,7 @@ class Account:
                     self.seven = 0
                     self.withdraw("9", amount)
                 else:
-                    self.eightHist.append("W" + fund + amount)
+                    self.eightHist.append("W" + fund + str(amount))
                     self.eight -= amount
             elif fund == "9":
                 if amount > self.nine:
@@ -146,7 +148,7 @@ class Account:
                     self.nine = 0
                     self.withdraw("0", amount)
                 else:
-                    self.nineHist.append("W" + fund + amount)
+                    self.nineHist.append("W" + fund + str(amount))
                     self.nine -= amount
             elif fund == "0":
                 if amount > self.zero:
@@ -155,7 +157,7 @@ class Account:
                     self.zero = 0
                     self.withdraw("1", amount)
                 else:
-                    self.zeroHist.append("W" + fund + amount)
+                    self.zeroHist.append("W" + fund + str(amount))
                     self.zero -= amount
             else:
                 print("error")

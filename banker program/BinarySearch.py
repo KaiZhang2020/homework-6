@@ -41,8 +41,34 @@ class BinaryTree:
 
     def _find(self, target, node):
         if target == node.data.number:
-            return node
+            return node.data
         elif (target < node.data.number and node.left is not None):
             return self._find(target, node.left)
         elif (target > node.data.number and node.right is not None):
             return self._find(target, node.right)
+        else:
+            print("error")
+
+    def removeNode(self, root, key):
+        if root == None:
+            return root
+        
+        if key < root.key:
+            root.left = self.removeNode(root.left, key)
+        
+        elif(key > root.key):
+            root.right = self.removeNode(root.right, key)
+
+        else:
+            if root.left == None:
+                temp = root.right
+                root = None
+                return temp
+            elif root.right == None:
+                temp = root.left
+                root = None
+                return temp
+            
+            self._add(root.right.data, root.right)
+            self._add(root.right.data, root.right)
+            return root
