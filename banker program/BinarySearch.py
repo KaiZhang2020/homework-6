@@ -39,10 +39,10 @@ class BinaryTree:
         else:
             return None
 
-    def _find(self, data, node):
-        if data == node.data:
+    def _find(self, target, node):
+        if target == node.data.number:
             return node
-        elif (data < node.data and node.left is not None):
-            return self._find(data, node.left)
-        elif (data > node.data and node.right is not None):
-            return self._find(data, node.right)
+        elif (target < node.data.number and node.left is not None):
+            return self._find(target, node.left)
+        elif (target > node.data.number and node.right is not None):
+            return self._find(target, node.right)
