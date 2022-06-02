@@ -31,7 +31,7 @@ class BinaryTree:
             if node.right is not None:
                 self._add(data, node.right)
             else:
-                node.rightight = Node(data)
+                node.right = Node(data)
 
     def find(self, data):
         if self.root is not None:
@@ -47,7 +47,7 @@ class BinaryTree:
         elif (target > node.data.number and node.right is not None):
             return self._find(target, node.right)
         else:
-            print("error")
+            print("Account not found")
 
     def removeNode(self, root, key):
         if root == None:
