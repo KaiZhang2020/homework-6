@@ -109,42 +109,42 @@ class Account:
         elif fund == "4":
             if amount > self.four:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 4")
+                self.transHist.append("Error: insufficent fund in acct 4 of account " + str(self.number) + "\n")
             else:
                 self.fourHist.append("W " + self.number + fund + " " + str(amount))
                 self.four -= amount
         elif fund == "5":
             if amount > self.five:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 5")
+                self.transHist.append("Error: insufficent fund in acct 5 of account " + str(self.number) + "\n")
             else:
                 self.fiveHist.append("W " + self.number + fund + " " + str(amount))
                 self.five -= amount
         elif fund == "6":
             if amount > self.six:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 6")
+                self.transHist.append("Error: insufficent fund in acct 6 of account " + str(self.number) + "\n")
             else:
                 self.sixHist.append("W " + self.number + fund + " " + str(amount))
                 self.six -= amount
         elif fund == "7":
             if amount > self.seven:
                 self.sevenHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 7")
+                self.transHist.append("Error: insufficent fund in acct 7 of account " + str(self.number) + "\n")
             else:
                 self.sevenHist.append("W " + self.number + fund + " " + str(amount))
                 self.seven -= amount
         elif fund == "8":
             if amount > self.eight:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 8")
+                self.transHist.append("Error: insufficent fund in acct 8 of account " + str(self.number) + "\n")
             else:
                 self.eightHist.append("W " + self.number + fund + " " + str(amount))
                 self.eight -= amount
         elif fund == "9":
             if amount > self.nine:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount) + "(failed)")
-                print("insufficent fund in acct 9")
+                self.transHist.append("Error: insufficent fund in acct 9 of account " + str(self.number) + "\n")
             else:
                 self.nineHist.append("W " + self.number + fund + " " + str(amount))
                 self.nine -= amount

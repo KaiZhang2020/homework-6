@@ -1,6 +1,7 @@
-Processing Done. Final Balances 
 Transaction History for Johnny Cash
-   W 1001 20000(failed) 
+   Error: insufficent fund in acct 7 of account 1001
+
+   Error: account 9876 already exists, open request refused 
 
 Money Market: $470
    D 10010 542
@@ -26,11 +27,12 @@ Growth Index Fund: $10931
    D 10017 6543
    W 10017 1000
    W 10017 54
+   W 10017 20000(failed)
 Value Fund: $0
 Value Stock Index: $0
 
 Transaction History for Hank Williams
-   transfer from account 1253 to account 4356 failed 
+   Error: transfer from account 1253 to account 4356 failed 
 
 Money Market: $10000
    D 12530 10000
@@ -55,10 +57,11 @@ Value Fund: $10000
 Value Stock Index: $10000
    D 12539 10000
 Transaction History for Hank Williams by fund 
-Prime Money Market: $10000
-   D 12531 10000
+500 Index Fund: $10000
+   D 12534 10000
 
 
+Processing Done. Final Balances 
 Johnny Cash Account ID: 1001
    Money Market: $470
    Prime Money Market: $3042

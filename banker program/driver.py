@@ -12,8 +12,6 @@ b = banker(transaction_list)
 
 output = open('BankTransOut.txt', 'w')
 
-output.write("Processing Done. Final Balances \n")
-
 while len(b.AccountList) > 0:
     account_to_get = b.AccountList.pop(0)
     final_list.append(account_to_get)
@@ -30,6 +28,8 @@ while len(b.AccountList) > 0:
         act.fundHistory(fundNum[0], output)
 
     output.write("\n")
+
+output.write("Processing Done. Final Balances \n")
 
 while len(final_list) > 0:
     acct_to_get = final_list.pop(0)
