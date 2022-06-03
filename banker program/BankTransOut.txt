@@ -1,16 +1,10 @@
 Processing Done. Final Balances 
-Transaction History for Johnny Cash by fundTransaction History for Johnny Cash   O Johnny Cash 1001
-   W 1001 1000
+Transaction History for Johnny Cash
+   W 1001 20000(failed) 
 
-   W 1001 65
-
-   W 1001 72
-
-   W 1001 20000
-(failed)
 Money Market: $470
    D 10010 542
-   W 0 72
+   W 10010 72
 Prime Money Market: $3042
    D 10011 1542
    D 10011 1500
@@ -26,29 +20,28 @@ Capital Value Fund: $54
 Growth Equity Fund: $15053
    D 10016 7542
    D 10016 7576
-   W 6 65
+   W 10016 65
 Growth Index Fund: $10931
    D 10017 5442
    D 10017 6543
-   W 7 1000
-   W 7 54
+   W 10017 1000
+   W 10017 54
 Value Fund: $0
 Value Stock Index: $0
 
-Transaction History for Hank Williams by fundTransaction History for Hank Williams   O Hank Williams 1253
-   W 1253 15000
+Transaction History for Hank Williams
+   transfer from account 1253 to account 4356 failed 
 
-   transfer from account 1253 to account 4356 failed
 Money Market: $10000
    D 12530 10000
 Prime Money Market: $10000
    D 12531 10000
 Long-Term Bond: $0
    D 12532 10000
-   W 2 10000
+   W 12532 10000
 Short-Term Bond: $5000
    D 12533 10000
-   W 3  5000
+   W 12533 5000
 500 Index Fund: $10000
    D 12534 10000
 Capital Value Fund: $10000
@@ -61,32 +54,9 @@ Value Fund: $10000
    D 12538 10000
 Value Stock Index: $10000
    D 12539 10000
-Transaction History for Hank Williams by fundTransaction History for Hank Williams   O Hank Williams 1253
-   W 1253 15000
-
-   transfer from account 1253 to account 4356 failed
-Money Market: $10000
-   D 12530 10000
+Transaction History for Hank Williams by fund 
 Prime Money Market: $10000
    D 12531 10000
-Long-Term Bond: $0
-   D 12532 10000
-   W 2 10000
-Short-Term Bond: $5000
-   D 12533 10000
-   W 3  5000
-500 Index Fund: $10000
-   D 12534 10000
-Capital Value Fund: $10000
-   D 12535 10000
-Growth Equity Fund: $10000
-   D 12536 10000
-Growth Index Fund: $10000
-   D 12537 10000
-Value Fund: $10000
-   D 12538 10000
-Value Stock Index: $10000
-   D 12539 10000
 
 
 Johnny Cash Account ID: 1001

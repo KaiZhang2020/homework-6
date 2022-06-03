@@ -42,9 +42,9 @@ class BinaryTree:
     def _find(self, target, node):
         if target == node.data.number:
             return node.data
-        elif (target < node.data.number and node.left is not None):
+        elif target < node.data.number and node.left is not None:
             return self._find(target, node.left)
-        elif (target > node.data.number and node.right is not None):
+        elif target > node.data.number and node.right is not None:
             return self._find(target, node.right)
         else:
             return None
