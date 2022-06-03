@@ -47,28 +47,37 @@ class BinaryTree:
         elif (target > node.data.number and node.right is not None):
             return self._find(target, node.right)
         else:
-            print("Account not found")
+            return None
+
+    def succesorHelper(self, root):
+        root = root.right
+        while root.left:
+            root = root.left
+        return root.data
+    
+    def predecessorHelper(self, root):
+        root = root.left
+        while root.right:
+            root = root.right
+        return root.data
 
     def removeNode(self, root, key):
-        if root == None:
+        if not root:
             return root
         
-        if key < root.key:
+        if key < root.data:
             root.left = self.removeNode(root.left, key)
         
-        elif(key > root.key):
+        elif key > root.data:
             root.right = self.removeNode(root.right, key)
 
         else:
-            if root.left == None:
-                temp = root.right
+            if not (root.left or root.right):
                 root = None
-                return temp
-            elif root.right == None:
-                temp = root.left
-                root = None
-                return temp
-            
-            self._add(root.right.data, root.right)
-            self._add(root.right.data, root.right)
-            return root
+            elif root.right:
+                root.data = self.succesorHelper(root)
+                root.right = self.removeNode(root.right, root.data)
+            else:
+                root.data = self.predecessorHelper(root)
+                root.left = self.removeNode(root.left, root.data)
+        return root
